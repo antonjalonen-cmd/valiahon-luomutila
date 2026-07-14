@@ -1,0 +1,25 @@
+{
+  "farm_name": "Väliahon luomutila",
+  "site_url": "https://antonjalonen-cmd.github.io/valiahon-luomutila/",
+  "email": "nykanen.arto@luukku.com",
+  "phone": "0400 313 196",
+  "contact_name": "Arto Nykänen",
+  "reason_blocked": "PLACEHOLDER PHOTOS — browser locked when built. Add real photos first, then send email to nykanen.arto@luukku.com using standard template.",
+  "facebook": "https://www.facebook.com/valiahonluomutilajuva/",
+  "photos_needed": false,
+  "photo_slots": [
+    "hero-top.jpg",
+    "hero-bottom.jpg",
+    "tarina.jpg",
+    "kukat.jpg",
+    "gallery1.jpg",
+    "gallery2.jpg",
+    "gallery3.jpg",
+    "gallery4.jpg",
+    "gallery5.jpg"
+  ],
+  "created": "2026-07-09",
+  "cleared_by": "reconcile_photo_locks.py",
+  "cleared_reason": "live site PASSes verify_site.py — real photos deployed",
+  "cleared_at": "2026-07-13T07:45:09+03:00"
+}
