@@ -622,21 +622,21 @@
   </div>
   <div class="gallery-grid">
     <div class="gallery-cell" id="gc1">
-      <img src="images/hero.jpg" alt="Väliahon luomutila" id="gi1">
+      <img src="images/hero.jpg" alt="Väliahon luomutila" id="gi1" onerror="this.style.display='none';document.getElementById('gp1').style.display='flex'">
       <div class="gallery-ph" id="gp1">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span class="lang-fi">Kuva tulossa</span><span class="lang-sv">Foto kommer</span><span class="lang-en">Photo coming</span>
       </div>
     </div>
     <div class="gallery-cell" id="gc2">
-      <img src="images/gallery1.jpg" alt="Luomumarjoja" id="gi2">
+      <img src="images/gallery1.jpg" alt="Luomumarjoja" id="gi2" onerror="this.style.display='none';document.getElementById('gp2').style.display='flex'">
       <div class="gallery-ph" id="gp2">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span class="lang-fi">Kuva tulossa</span><span class="lang-sv">Foto kommer</span><span class="lang-en">Photo coming</span>
       </div>
     </div>
     <div class="gallery-cell" id="gc3">
-      <img src="images/gallery2.jpg" alt="Tila pellolla" id="gi3">
+      <img src="images/gallery2.jpg" alt="Tila pellolla" id="gi3" onerror="this.style.display='none';document.getElementById('gp3').style.display='flex'">
       <div class="gallery-ph" id="gp3">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
         <span class="lang-fi">Kuva tulossa</span><span class="lang-sv">Foto kommer</span><span class="lang-en">Photo coming</span>
@@ -693,20 +693,6 @@
 </footer>
 
 <script>
-// Gallery placeholder logic
-['gi1','gi2','gi3'].forEach((id, i) => {
-  const img = document.getElementById(id);
-  const ph = document.getElementById('gp' + (i + 1));
-  if (!img) return;
-  function checkImg() {
-    if (!img.complete || img.naturalWidth === 0) { img.style.display='none'; if(ph) ph.style.display='flex'; }
-    else { if(ph) ph.style.display='none'; img.style.display='block'; }
-  }
-  img.addEventListener('error', () => { img.style.display='none'; if(ph) ph.style.display='flex'; });
-  img.addEventListener('load', checkImg);
-  checkImg();
-});
-
 // Language switcher
 function setLang(lang) {
   document.querySelectorAll('.lang-fi,.lang-sv,.lang-en').forEach(el => el.style.display = 'none');
